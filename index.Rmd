@@ -1,18 +1,15 @@
-<h1 align="center" style="color:blue">Improving the fight against corruption</h1>
+<h1 align="center" style="color:blue">Exploring Corruption Policies outcomes worlwide</h1>
 
 By: **StudentA**, **StudentB** and **StudentC**
 <br>
 <br>
 
 ______
-This post see to uncover the relationships among a set of varisbles; in particular, it shows if the economy and press freedom are good predictors of corruption control worldwide.
 
-The data we have used was previously organized in Python, you can see that [here](https://github.com/EvansDataScience/basicFinal_CompThink/blob/master/projectDataPreprocessing.ipynb).
-
-Let us call the data:
+Our group is interested in corruption. This is how corruption is behaving worldwide:
 
 ```{r}
-dataLink="https://github.com/EvansDataScience/basicFinal_CompThink/raw/master/dataProject.csv"
+dataLink="https://github.com/EvansDataScience/basicFinal_VISUAL/raw/master/dataProject.csv"
 df=read.csv(dataLink,stringsAsFactors = FALSE)
 ```
 
@@ -22,11 +19,35 @@ These are the contents:
 str(df)
 ```
 
-The variable corruption behaves like this:
+## Univariate plots:
+
+```{r}
+summary(df$corruption)
+```
+
+The variable corruption measures how well countrues are facing it. Then, 75% of the countries achieve at most a score of 57. No country achieves a score greater than 90.
+
+You can see the distribution here:
 
 ```{r}
 hist(df$corruption)
 ```
+
+That plot does not allow to find if we have outliers, for that we need a boxplot:
+
+```{r}
+boxplot(df$corruption,horizontal = TRUE)
+```
+
+
+## Bivariate plots:
+
+Let me see the median of corruption by continent:
+
+```{r}
+boxplot(df$corruption~df$Continent,horizontal = TRUE,las=2)
+```
+
 
 Let me see how each of the proposed predictors  relates to our dependent variable:
 

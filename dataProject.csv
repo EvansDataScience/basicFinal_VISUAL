@@ -2,7 +2,7 @@ iso,country,corruption,economy,press,Continent
 ALB,Albania,39,7.54,60.02,Europe
 DZA,Algeria,34,4.84,48.25,Africa
 AGO,Angola,18,5.4,50.05,Africa
-ARG,Argentina,36,4.88,64.85,South America
+ARG,Argentina,36,4.88,64.85,S_America
 ARM,Armenia,33,7.6,61.15,Asia
 AUS,Australia,79,7.99,72.1,Oceania
 AUT,Austria,75,7.66,76.76,Europe
@@ -12,10 +12,10 @@ BGD,Bangladesh,26,6.32,44,Asia
 BEL,Belgium,77,7.44,75.76,Europe
 BEN,Benin,36,5.77,60.97,Africa
 BTN,Bhutan,65,7.11,59.21,Asia
-BOL,Bolivia,33,6.03,58.16,South America
+BOL,Bolivia,33,6.03,58.16,S_America
 BIH,Bosnia and Herzegovina,39,6.61,61.49,Europe
 BWA,Botswana,60,7.37,67.03,Africa
-BRA,Brazil,40,5.75,57.32,South America
+BRA,Brazil,40,5.75,57.32,S_America
 BRN,Brunei Darussalam,58,6.76,36.09,Asia
 BGR,Bulgaria,41,7.39,55.48,Europe
 BFA,Burkina Faso,42,5.87,67.28,Africa
@@ -23,22 +23,22 @@ BDI,Burundi,20,6.08,35.84,Africa
 CIV,Ivory Coast,34,5.88,59.77,Africa
 KHM,Cambodia,21,7.21,49.24,Asia
 CMR,Cameroon,26,5.92,49.41,Africa
-CAN,Canada,82,7.94,74.68,North America
+CAN,Canada,82,7.94,74.68,N_America
 CPV,Cape Verde,59,6.66,70.12,Africa
 CAF,Central African Republic,20,4.62,56.34,Africa
 TCD,Chad,20,5.26,49.35,Africa
-CHL,Chile,66,7.77,70.71,South America
+CHL,Chile,66,7.77,70.71,S_America
 CHN,China,40,6.4,8.98,Asia
-COL,Colombia,37,6.4,45.83,South America
-CRI,Costa Rica,58,7.52,78.84,North America
+COL,Colombia,37,6.4,45.83,S_America
+CRI,Costa Rica,58,7.52,78.84,N_America
 HRV,Croatia,49,7.02,62.03,Europe
 CYP,Cyprus,55,7.79,71.68,Asia
 CZE,Czech Republic,55,7.46,73.28,Europe
 DNK,Denmark,90,7.77,81.05,Europe
-DOM,Dominican Republic,31,7.21,62.04,North America
-ECU,Ecuador,31,5.88,56.73,South America
+DOM,Dominican Republic,31,7.21,62.04,N_America
+ECU,Ecuador,31,5.88,56.73,S_America
 EGY,Egypt,34,5.73,35.49,Africa
-SLV,El Salvador,36,7.13,62.74,North America
+SLV,El Salvador,36,7.13,62.74,N_America
 EST,Estonia,70,7.95,75.63,Europe
 ETH,Ethiopia,34,5.53,44.81,Africa
 FIN,Finland,89,7.75,81.35,Europe
@@ -49,12 +49,12 @@ GEO,Georgia,57,8.01,61.98,Asia
 DEU,Germany,81,7.69,75.14,Europe
 GHA,Ghana,43,6.53,71.99,Africa
 GRC,Greece,44,6.36,59.59,Europe
-GTM,Guatemala,28,7.69,51.91,North America
+GTM,Guatemala,28,7.69,51.91,N_America
 GIN,Guinea,27,5.75,56.86,Africa
 GNB,Guinea-Bissau,16,5.65,60.91,Africa
-GUY,Guyana,34,6.45,62.87,South America
-HTI,Haiti,20,6.53,65.28,North America
-HND,Honduras,30,7.3,45.32,North America
+GUY,Guyana,34,6.45,62.87,S_America
+HTI,Haiti,20,6.53,65.28,N_America
+HND,Honduras,30,7.3,45.32,N_America
 HKG,Hong Kong,77,8.97,61.44,Asia
 HUN,Hungary,48,7.3,61.77,Europe
 ISL,Iceland,78,7.23,74.64,Europe
@@ -64,7 +64,7 @@ IRN,Islamic Republic of Iran,29,5.31,23.42,Asia
 IRL,Ireland,73,8.19,77.54,Europe 
 ISR,Israel,64,7.49,57.36,Asia
 ITA,Italy,47,7.3,61.01,Europe
-JAM,Jamaica,39,7.3,77.49,North America
+JAM,Jamaica,39,7.3,77.49,N_America
 JPN,Japan,72,7.47,61.27,Asia
 JOR,Jordan,48,7.47,45.45,Asia
 KAZ,Kazakhstan,29,7.18,35.39,Asia
@@ -87,7 +87,7 @@ MLI,Mali,32,5.9,50.11,Africa
 MLT,Malta,55,7.7,66.1,Europe
 MRT,Mauritania,27,5.56,65.91,Africa
 MUS,Mauritius,54,8.04,62.25,Africa
-MEX,Mexico,30,6.95,40.61,North America
+MEX,Mexico,30,6.95,40.61,N_America
 MDA,Moldova,30,6.56,61.11,Europe
 MNG,Mongolia,38,7.43,62.33,Asia
 MNE,Montenegro,45,6.77,57.15,Europe
@@ -98,16 +98,16 @@ NAM,Namibia,52,6.76,74.79,Africa
 NPL,Nepal,29,6.49,57.32,Asia
 NLD,Netherlands,83,7.74,81.18,Europe
 NZL,New Zealand,90,8.48,79.93,Oceania
-NIC,Nicaragua,26,7.28,61.12,North America
+NIC,Nicaragua,26,7.28,61.12,N_America
 NER,Niger,35,5.74,65.32,Africa
 NGA,Nigeria,28,6.38,54.04,Africa
 NOR,Norway,85,7.67,81.15,Europe
 OMN,Oman,45,6.62,49.51,Asia
 PAK,Pakistan,32,5.93,41.42,Asia
-PAN,Panama,38,7.59,59.35,North America
+PAN,Panama,38,7.59,59.35,N_America
 PNG,Papua New Guinea,28,6.42,64.13,Oceania
-PRY,Paraguay,30,6.91,56.31,South America
-PER,Peru,35,7.44,59.95,South America
+PRY,Paraguay,30,6.91,56.31,S_America
+PER,Peru,35,7.44,59.95,S_America
 PHL,Philippines,35,7.47,45.28,Asia
 POL,Poland,62,7.34,66.05,Europe 
 PRT,Portugal,62,7.53,72.67,Europe
@@ -126,7 +126,7 @@ SVN,Slovenia,61,7,67.68,Europe
 ZAF,South Africa,45,6.63,68.02,Africa
 ESP,Spain,58,7.51,70.02,Europe
 LKA,Sri Lanka,36,6.65,44.98,Asia
-SUR,Suriname,45,6.67,73.24,South America
+SUR,Suriname,45,6.67,73.24,S_America
 SWE,Sweden,88,7.65,77.61,Europe
 CHE,Switzerland,86,8.44,78.18,Europe
 SYR,Syrian Arab Republic,13,5.22,8.59,Asia
@@ -136,18 +136,18 @@ TZA,Tanzania,32,6.92,61.29,Africa
 THA,Thailand,35,6.75,45.41,Asia
 COD,The Democratic Republic Of The Congo,21,5.45,38.97,Africa
 MKD,Macedonia,37,7.17,53.85,Europe
-USA,United States,74,7.94,67.45,North America
+USA,United States,74,7.94,67.45,N_America
 TLS,East Timor,35,6.29,57.92,Asia
 TGO,Togo,32,5.7,59.63,Africa
-TTO,Trinidad and Tobago,35,6.5,66.65,North America
+TTO,Trinidad and Tobago,35,6.5,66.65,N_America
 TUN,Tunisia,41,6.32,58.34,Africa
 TUR,Turkey,41,6.82,39.18,Asia
 UGA,Uganda,25,7.25,57.36,Africa
 UKR,Ukraine,29,5.38,57.01,Europe
 ARE,United Arab Emirates,66,7.5,53.21,Asia
 GBR,United Kingdom,81,8.05,68.24,Europe
-URY,Uruguay,71,7.16,74.06,South America
-VEN,Venezuela,17,2.92,45.17,South America
+URY,Uruguay,71,7.16,74.06,S_America
+VEN,Venezuela,17,2.92,45.17,S_America
 VNM,Vietnam,33,6.3,15.67,Asia
 YEM,Yemen,14,6.17,22.87,Asia
 ZMB,Zambia,38,6.75,54.86,Africa
