@@ -1,5 +1,5 @@
 # Final Project
-## Course: Computational Thinking for Governance Analytics
+## Course: Visual Analytics for Policy and Management
 
 ## Group: 
 
@@ -9,15 +9,13 @@
 * Student D
 
 <center>
-<img src="https://github.com/EvansDataScience/basicFinal_CompThink/raw/master/groupPic.png" width="800">
+<img src="https://github.com/EvansDataScience/basicFinal_VISUAL/raw/master/groupPic.png" width="800">
 </center>
 
 In this repo you can find:
 
 * The final [report](http://htmlpreview.github.io/?https://github.com/EvansDataScience/basicFinal_CompThink/blob/master/Analytics.html)
 
-* The folder [data](https://github.com/EvansDataScience/basicFinal_CompThink/tree/master/data) with all the original files.
 
-* The [preprocessed data](https://github.com/EvansDataScience/basicFinal_CompThink/blob/master/dataProject.csv).
+* The [data](https://github.com/EvansDataScience/basicFinal_VISUAL/blob/master/dataProject.csv) used for the project.
 
-* The Python [code](https://nbviewer.jupyter.org/github/EvansDataScience/basicFinal_CompThink/blob/master/projectDataPreprocessing.ipynb) to pre process the data.
