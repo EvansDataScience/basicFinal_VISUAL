@@ -45,9 +45,18 @@ boxplot(df$corruption,horizontal = TRUE)
 Let me see the median of corruption by continent:
 
 ```{r}
-boxplot(df$corruption~df$Continent,horizontal = TRUE,las=2)
+boxplot(df$corruption~df$Continent,horizontal = FALSE,las=2)
 ```
 
+The total did not detect outliers, but the bivariate exploration  did. Let's see if those median values are statistically different:
+
+```{r nonparam, eval=FALSE}
+# non parametric
+kruskal.test(corruption~factor(Continent), data = df)
+```
+
+
+We should wonder what variables could explain this variability worldwide. 
 
 Let me see how each of the proposed predictors  relates to our dependent variable:
 
@@ -58,6 +67,10 @@ plot(df$corruption,df$press)
 ```{r}
 plot(df$corruption,df$economy)
 ```
+
+
+## Multivariate plots:
+
 
 We know that the predictors have a fairly linear relationship with the dependent variable, then we can test our hypothesis by seeing the effect of each controlling by the other: 
 
@@ -70,51 +83,113 @@ The result is shown here:
 summary(test)
 ```
 
-As we see above, our model is **significant** with a decent Adjusted R-squared:
+A helpful plot will help us show the effect of those predictors on corruption.
+
+
 ```{r}
-summary(test)$adj.r.squared
+library(dotwhisker)
+library(broom)
+library(dplyr)
 ```
 
-Next, we need to verify some requisites so that our results are trustable.
-
-1. The residuals should seems normally distributed: for that we need to see them along the vertical of the qqplot.
+There is some preprocessing needed to use ggplot. 
 
 ```{r}
-# normality of residuals?
+model1_t = tidy(test) %>%   
+    mutate(model = "Model 1")
+
+dwplot(model1_t) + 
+    geom_vline(xintercept = 0, 
+               colour = "grey60", 
+               linetype = 2) +
+    scale_colour_grey(start = .1, end = .7) +theme_bw()
+```
+
+We have seen that all these variables are well related. We could try a cluster analysis, let me try four clusters:
+
+```{r}
+library(cluster)
+set.seed(123)
+
+# computing clusters
+result <- kmeans(df[,c(3:5)],
+                 centers = 5)
+
+df$cluster=as.factor(result$cluster)
+```
+
+Let's see the median of each cluster:
+```{r}
+boxplot(df$corruption~df$cluster,horizontal = FALSE,las=2)
+```
+
+We should recode the las two clusters:
+
+```{r, eval=TRUE}
 library(car)
-qqPlot(test, main="QQ Plot")
+df$cluster<-car::recode(df$cluster,"4=5;5=4")
 ```
 
-2. The error variance changes with the level of the response, which will happen if the output of the _ncvTest_ function is non-significant.
+And see how the world looks like.
 
+Let me show you the map:
+
+```{r, eval=TRUE}
+library(rgdal)
+folder='world_map'
+file='world_map.shp'
+mapFile=file.path(folder,file)
+
+#original map
+mapWorld = rgdal::readOGR(mapFile,stringsAsFactors=F) 
+```
+
+The _mapWorld_ file has the following columns:
 ```{r}
-# homocedastic?
-ncvTest(test)
+names(mapWorld)
 ```
 
-3. The predictors are no highly correlated:
+Then, we can merge that file with our current data frame:
 
-```{r}
-# collinearity?
-vif(test) > 4 # problem?
+```{r, eval=TRUE}
+
+# NEW map
+mapWorldAll=merge(mapWorld, #map first
+                   df, 
+                   by.x='ISO3', # common column
+                   by.y='iso', # common column
+                   all.x=F) # reduced map.
 ```
 
-4. Detect the change if influential observations are eliminated:
-```{r}
-influencePlot(test, id.method = 'noteworthy', main="Influence Plot", sub="Circle size is proportial to Cook's Distance" )
+Now paint the world:
+
+```{r, eval=TRUE}
+# what:
+varToPlot=mapWorldAll$cluster
+
+#which colors: (order of clusters)
+
+palette = c('black','green','yellow','orange','magenta')
+
+# plotting:
+
+## base layer (original map)
+plot(mapWorld,col='grey',border=0) 
+
+## top layer
+plot(mapWorldAll, col = palette[varToPlot],border=F,add=T)
+
+
+legend('left', legend = c("GREAT",'OK',"MEDIUM","BAD","LOST"), 
+       fill = palette,
+       cex = 0.6, 
+       bty = "n",
+       title="Clusters")
 ```
 
-Those cases (rows) are not considered now:
 
-```{r}
-CountrysOUT=c(122,149)
-summary(lm(as.numeric(corruption)~press+economy,
-           data=df[-CountrysOUT,]))
-```
-
-As you can see, this got better...
 
 
 ______
 
-[GO BACK TO REPO](https://github.com/EvansDataScience/basicFinal_CompThink)
+[GO BACK TO REPO](https://github.com/EvansDataScience/basicFinal_VISUAL)
